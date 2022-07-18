@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curriculum Vitae - Damian Senn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+        all: unset;
+        display: revert;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        font-family: 'PT Sans', sans-serif;
+        font-size: 16px;
+        hyphens: auto;
+      }
+
+      main {
+        margin: 64px auto;
+      }
+
+      h1 {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 0.5em;
+      }
+
+      dl {
+        display: grid;
+        grid-template-columns: max-content auto;
+        gap: 8px 16px;
+        margin-bottom: 48px;
+      }
+
+      dt {
+        font-weight: 700;
+      }
+
+      img {
+        justify-self: center;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        object-fit: cover;
+        object-position: center -64px;
+        top: -57px;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 14px;
+      }
+
+      li:not(:last-child)::after {
+        content: ', ';
+        white-space: pre;
+      }
+
+      .project {
+        display: flex;
+        margin-bottom: 24px;
+        break-inside: avoid;
+      }
+
+      .project > time {
+        font-size: 20px;
+        flex: 0 0 120px;
+      }
+    </style>
+    <style media="screen">
+      main {
+        display: grid;
+        grid-template:
+          'header header'
+          'personal portrait' min-content
+          'employment portrait' min-content
+          'projects projects'
+          'education education'
+          'languages languages';
+        max-width: 1200px;
+      }
+
+      a {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .definition-list {
+        break-inside: avoid;
+      }
+
+      .projects dl {
+        row-gap: 24px;
+        margin-bottom: 24px;
+      }
+    </style>
+    <link rel="stylesheet" media="print" href="./src/print.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
