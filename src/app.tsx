@@ -69,6 +69,11 @@ const data = {
       description: 'RxJS Workshop with Ben Lesh',
     },
     {
+      to: '2015',
+      from: '2015',
+      description: 'OpenShift Workshop by Red Hat',
+    },
+    {
       to: '2008',
       from: '2006',
       description: 'Computer Science Education at CsBe',
