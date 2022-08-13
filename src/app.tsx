@@ -26,7 +26,7 @@ function DefinitionList(props: {
   const chunkedArray = props.chunk ? chunk(dataArray, props.chunk) : [dataArray]
 
   return (
-    <div
+    <section
       class={`definition-list ${gridArea}`}
       style={gridArea ? { gridArea } : undefined}
     >
@@ -46,7 +46,7 @@ function DefinitionList(props: {
           </dl>
         </div>
       ))}
-    </div>
+    </section>
   )
 }
 
@@ -69,10 +69,10 @@ function Employments() {
 
 function Projects() {
   return (
-    <div style={{ gridArea: 'projects' }}>
+    <section style={{ gridArea: 'projects' }}>
       <h2>Projects</h2>
       {data.projects.map((project) => (
-        <div class="project" key={project.title}>
+        <article class="project" key={project.title}>
           <time>
             {project.from === project.to
               ? project.to
@@ -97,9 +97,9 @@ function Projects() {
               </ul>
             )}
           </div>
-        </div>
+        </article>
       ))}
-    </div>
+    </section>
   )
 }
 
