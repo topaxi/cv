@@ -13,6 +13,20 @@ export const data = {
     Nationality: 'Switzerland',
     'Civil Status': 'Married',
   },
+  skills: [
+    ['React', 750],
+    ['TypeScript', 500],
+    ['Next.js', 500],
+    ['Kubernetes', 500],
+    ['Docker', 500],
+    // Skills to be removed from word cloud
+    ['SSR', -Infinity],
+    ['AngularJS', -Infinity],
+    ['Google Closure Compiler', -Infinity],
+    ['REST/JSON API', -Infinity],
+    ['cssnext', -Infinity],
+    ['Ionic v2 (Cordova)', -Infinity],
+  ],
   employments: [
     {
       to: 'today',
@@ -235,7 +249,7 @@ export const data = {
       description: 'Code Academy for Refugees',
       role: 'Teacher',
       responsibilities: 'Teaching web and JavaScript basics.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'WebSockets'],
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'WebSockets'],
     },
     {
       to: '2018',

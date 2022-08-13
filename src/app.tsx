@@ -21,20 +21,33 @@ function Employments() {
 }
 
 function Skills() {
-  const technologies = data.projects.flatMap((p) => p.technologies)
+  const technologies: Array<[string[], number]> = [
+    ...data.skills.map(([technology, weight]) => [[technology], weight]),
+    ...data.projects.map((p, i, projects) => [
+      p.technologies,
+      projects.length * 2 + (projects.length - i) * 2,
+    ]),
+  ] as any
+
   const wordCloud = technologies.reduce<Record<string, number>>(
-    (words, word, i) => {
-      words[word] ??= 0
-      words[word] += technologies.length * 2 + (technologies.length - i) * 2
+    (words, [t, weight]) => {
+      for (let word of t) {
+        words[word] ??= 0
+        words[word] += weight
+      }
 
       return words
     },
     {}
   )
-  const words = Object.entries(wordCloud).map(([text, value]) => ({
-    text,
-    value,
-  }))
+  const words = Object.entries(wordCloud)
+    .filter(([_text, value]) => value > 0)
+    .map(([text, value]) => ({
+      text,
+      value,
+    }))
+    // Sorting only to easier debug word weight
+    .sort((a, b) => b.value - a.value)
 
   return (
     <div
