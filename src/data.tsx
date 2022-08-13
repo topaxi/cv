@@ -165,7 +165,6 @@ export const data = {
         'styled-components',
         'Webpack',
       ],
-      breakAfter: 'page',
     },
     {
       to: '2019',
@@ -175,7 +174,7 @@ export const data = {
         'The comment system of Tamedias Newsnet and 20min.ch is being replaced by Coralproject Talk.',
       role: 'Software Engineer (Full Stack)',
       responsibilities: '',
-      technologies: ['Node.js', 'React', 'Redux', 'GraphQL', 'CSS'],
+      technologies: ['React', 'Redux', 'Node.js', 'GraphQL', 'CSS'],
     },
     {
       to: '2018',
@@ -186,13 +185,13 @@ export const data = {
       role: 'Software Engineer (Full Stack)',
       responsibilities: '',
       technologies: [
-        'Angular (2+)',
+        'Angular',
         'TypeScript',
         'RxJS',
         'Karma/Jasmine',
         'Webpack',
         'Bootstrap',
-        'Ruby on Rails (API-only REST/JSON)',
+        'Ruby on Rails',
         'Capybara',
         'PostgreSQL',
         'Docker',
@@ -219,7 +218,7 @@ export const data = {
       role: 'Software Engineer (Frontend, Requirements)',
       responsibilities: '',
       technologies: [
-        'Angular (2+)',
+        'Angular',
         'TypeScript',
         'NGRX',
         'RxJS',
@@ -245,7 +244,13 @@ export const data = {
       description: '',
       role: 'Software Engineer (Full Stack)',
       responsibilities: '',
-      technologies: ['Ruby on Rails', 'MySQL', 'jQuery', 'Bootstrap', 'SASS'],
+      technologies: [
+        'Ruby on Rails',
+        'PostgreSQL',
+        'jQuery',
+        'Bootstrap',
+        'SASS',
+      ],
     },
     {
       to: '2016',
@@ -254,13 +259,7 @@ export const data = {
       description: '',
       role: 'Software Engineer (Frontend)',
       responsibilities: '',
-      technologies: [
-        'AngularJS',
-        'SASS',
-        'Gulp',
-        'REST',
-        'Performance Optimierungen',
-      ],
+      technologies: ['AngularJS', 'TypeScript', 'SASS', 'Gulp', 'REST'],
     },
     {
       to: '2016',
@@ -270,7 +269,7 @@ export const data = {
       role: '',
       responsibilities: '',
       technologies: [
-        'Angular 2',
+        'Angular',
         'Ionic v2 (Cordova)',
         'TypeScript',
         'PouchDB',
@@ -300,7 +299,7 @@ export const data = {
         'HTML5',
         'Python',
         'Django',
-        'JSONAPI',
+        'JSON:API',
         'PostgreSQL',
       ],
     },
@@ -346,7 +345,7 @@ export const data = {
       description: '',
       role: 'Software Engineer (Backend)',
       responsibilities: '',
-      technologies: ['Node.js', 'Socket.IO', 'Python', 'Django'],
+      technologies: ['Node.js', 'WebSockets', 'Socket.IO', 'Python', 'Django'],
     },
     {
       to: '2014',

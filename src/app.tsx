@@ -1,3 +1,4 @@
+import ReactWordcloud from 'react-wordcloud'
 import { DateTime } from './components/DateTime'
 import { DefinitionList } from './components/DefinitionList'
 import { data } from './data'
@@ -19,13 +20,54 @@ function Employments() {
   )
 }
 
+function Skills() {
+  const technologies = data.projects.flatMap((p) => p.technologies)
+  const wordCloud = technologies.reduce<Record<string, number>>(
+    (words, word, i) => {
+      words[word] ??= 0
+      words[word] += technologies.length * 2 + (technologies.length - i) * 2
+
+      return words
+    },
+    {}
+  )
+  const words = Object.entries(wordCloud).map(([text, value]) => ({
+    text,
+    value,
+  }))
+
+  return (
+    <div
+      class="skills"
+      style={{
+        maxWidth: '420px',
+        maxHeight: '250px',
+        gridArea: 'skills',
+        justifySelf: 'center',
+      }}
+    >
+      <ReactWordcloud
+        words={words}
+        options={{
+          colors: ['#000', '#222', '#444', '#666'],
+          deterministic: true,
+          enableTooltip: false,
+          fontSizes: [12, 48],
+          rotationAngles: [0, 90],
+          rotations: 2,
+        }}
+      />
+    </div>
+  )
+}
+
 function Projects() {
   return (
     <section style={{ gridArea: 'projects' }}>
       <h2>Projects</h2>
       {data.projects.map((project) => (
         <article class="project" key={project.title}>
-          <DateTime {...project} className="project__date" />
+          <DateTime {...project} class="project__date" />
           <div>
             <h3>{project.title}</h3>
             {project.description && (
@@ -80,6 +122,7 @@ export function App() {
       <h1 style={{ gridArea: 'header' }}>Curriculum Vitae</h1>
       <img style={{ gridArea: 'portrait' }} src={data.portrait} />
       <Personal />
+      <Skills />
       <Employments />
       <Projects />
       <Education />
