@@ -161,7 +161,7 @@ export const data = {
       role: 'Software Architect (Frontend)',
       responsibilities:
         'Architecting the base structure of the application and teaching the full-stack developers frontend and Angular fundamentals.',
-      technologies: ['Angular', 'NGRX', 'TypeScript', 'CSS'],
+      technologies: ['Angular', 'NGRX', 'TypeScript', 'CSS3'],
     },
     {
       to: '2019',
@@ -188,7 +188,7 @@ export const data = {
         'The comment system of Tamedias Newsnet and 20min.ch is being replaced by Coralproject Talk.',
       role: 'Software Engineer (Full Stack)',
       responsibilities: '',
-      technologies: ['React', 'Redux', 'Node.js', 'GraphQL', 'CSS'],
+      technologies: ['React', 'Redux', 'Node.js', 'GraphQL', 'CSS3'],
     },
     {
       to: '2018',
