@@ -66,10 +66,19 @@
         justify-self: center;
         width: 300px;
         height: 300px;
+        max-width: 100%;
         position: relative;
         object-fit: cover;
         object-position: center -64px;
-        top: -57px;
+        margin-bottom: 24px;
+      }
+
+      @media (min-width: 700px) {
+        img {
+          top: -57px;
+          margin-bottom: 0;
+          max-width: unset;
+        }
       }
 
       ul {
@@ -99,13 +108,33 @@
       main {
         display: grid;
         grid-template:
-          'header header'
-          'personal portrait' min-content
-          'employment portrait' min-content
-          'projects projects'
-          'education education'
-          'languages languages';
+          'header'
+          'portrait'
+          'personal'
+          'employment'
+          'projects'
+          'education'
+          'languages';
         max-width: 1200px;
+        padding: 0 24px;
+      }
+
+      @media (min-width: 700px) {
+        main {
+          grid-template:
+            'header header'
+            'personal portrait' min-content
+            'employment portrait' min-content
+            'projects projects'
+            'education education'
+            'languages languages';
+        }
+      }
+
+      @media (min-width: 1248px) {
+        main {
+          padding: 0;
+        }
       }
 
       a {
