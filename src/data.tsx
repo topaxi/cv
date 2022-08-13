@@ -282,9 +282,9 @@ export const data = {
       from: '2016',
       title: 'NDBJS',
       description: '',
-      role: '',
+      role: 'Software Engineer (Frontend)',
       responsibilities: '',
-      technologies: ['Ruby on Rails', 'MySQL', 'jQuery', 'Bootstrap', 'SASS'],
+      technologies: ['jQuery', 'Bootstrap', 'SASS'],
     },
     {
       to: '2016',
