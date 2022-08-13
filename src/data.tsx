@@ -21,6 +21,7 @@ export const data = {
     ['Docker', 500],
     // Skills to be removed from word cloud
     ['SSR', -Infinity],
+    ['XHTML 1.1', -Infinity],
     ['AngularJS', -Infinity],
     ['Google Closure Compiler', -Infinity],
     ['REST/JSON API', -Infinity],
