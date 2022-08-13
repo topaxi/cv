@@ -152,17 +152,6 @@ export const data = {
     {
       to: '2019',
       from: '2018',
-      title: 'Comment system for Tamedia Newsnet & 20min.ch',
-      description:
-        'The comment system of Tamedias Newsnet and 20min.ch is being replaced by Coralproject Talk.',
-      role: 'Software Engineer (Full Stack)',
-      responsibilities: '',
-      technologies: ['Node.js', 'React', 'Redux', 'GraphQL', 'CSS'],
-      breakAfter: 'page',
-    },
-    {
-      to: '2018',
-      from: '2019',
       title: 'Tamedia Unity',
       description:
         'Development of a new content management system for every Tamedia online publication.',
@@ -176,6 +165,17 @@ export const data = {
         'styled-components',
         'Webpack',
       ],
+      breakAfter: 'page',
+    },
+    {
+      to: '2019',
+      from: '2018',
+      title: 'Comment system for Tamedia Newsnet & 20min.ch',
+      description:
+        'The comment system of Tamedias Newsnet and 20min.ch is being replaced by Coralproject Talk.',
+      role: 'Software Engineer (Full Stack)',
+      responsibilities: '',
+      technologies: ['Node.js', 'React', 'Redux', 'GraphQL', 'CSS'],
     },
     {
       to: '2018',
