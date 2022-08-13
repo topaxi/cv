@@ -3,50 +3,52 @@
   margin: 16mm 24mm;
 }
 
-body {
-  margin: 0;
-}
+@media print {
+  body {
+    margin: 0;
+  }
 
-h1 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
+  h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
 
-img {
-  float: right;
-  width: 250px;
-  height: 250px;
-  object-position: center -56px;
-}
+  img {
+    float: right;
+    width: 250px;
+    height: 250px;
+    object-position: center -56px;
+  }
 
-.education {
-  break-before: page;
-}
+  .education {
+    break-before: page;
+  }
 
-.project:nth-child(n+8) {
-  margin-bottom: 16px;
-}
+  .project:nth-child(n + 8) {
+    margin-bottom: 16px;
+  }
 
-.project:nth-child(n+8) .project__description,
-.project:nth-child(n+8) .project__responsibilities {
-  display: none;
-}
+  .project:nth-child(n + 8) .project__description,
+  .project:nth-child(n + 8) .project__responsibilities {
+    display: none;
+  }
 
-.project:nth-child(n+8) h3,
-.project:nth-child(n+8) time {
-  font-size: 16px;
-}
+  .project:nth-child(n + 8) h3,
+  .project:nth-child(n + 8) time {
+    font-size: 16px;
+  }
 
-.project:nth-child(n+8) h3 {
-  display: inline;
-}
+  .project:nth-child(n + 8) h3 {
+    display: inline;
+  }
 
-.project:nth-child(n+8) .project__role {
-  display: inline;
-  color: #444;
-  font-size: 0.8em;
-}
+  .project:nth-child(n + 8) .project__role {
+    display: inline;
+    color: #444;
+    font-size: 0.8em;
+  }
 
-.project:nth-child(n+8) .project__role::before {
-  content: ' as '
+  .project:nth-child(n + 8) .project__role::before {
+    content: ' as ';
+  }
 }
