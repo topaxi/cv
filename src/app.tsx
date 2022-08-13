@@ -49,7 +49,7 @@ function Skills() {
       <ReactWordcloud
         words={words}
         options={{
-          colors: ['#000', '#222', '#444', '#666'],
+          colors: ['#222', '#555', '#888'],
           deterministic: true,
           enableTooltip: false,
           fontSizes: [12, 48],
