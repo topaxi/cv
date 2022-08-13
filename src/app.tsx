@@ -11,6 +11,29 @@ function chunk<T>(array: T[], n: number) {
   )
 }
 
+interface DateTimeProps {
+  className?: string
+  from?: `${number}`
+  to?: `${number}` | 'today'
+}
+
+function DateTime(props: DateTimeProps): JSX.Element {
+  const { className, from, to } = props
+
+  return from === to ? (
+    <time className={className} dateTime={to}>
+      {to}
+    </time>
+  ) : (
+    <span className={className}>
+      <time dateTime={from}>{from}</time>-
+      <time dateTime={to === 'today' ? String(new Date().getFullYear()) : to}>
+        {to}
+      </time>
+    </span>
+  )
+}
+
 function DefinitionList(props: {
   title?: string
   gridArea?: string
@@ -59,8 +82,8 @@ function Employments() {
     <DefinitionList
       title="Employments"
       gridArea="employment"
-      data={data.employments.map<[string, string]>((employment) => [
-        `${employment.from}-${employment.to}`,
+      data={data.employments.map<[JSX.Element, string]>((employment) => [
+        <DateTime {...employment} />,
         `${employment.company} as ${employment.jobTitle}`,
       ])}
     />
@@ -73,11 +96,7 @@ function Projects() {
       <h2>Projects</h2>
       {data.projects.map((project) => (
         <article class="project" key={project.title}>
-          <time>
-            {project.from === project.to
-              ? project.to
-              : `${project.from}-${project.to}`}
-          </time>
+          <DateTime {...project} className="project__date" />
           <div>
             <h3>{project.title}</h3>
             {project.description && (
@@ -108,10 +127,8 @@ function Education() {
     <DefinitionList
       title="Education"
       gridArea="education"
-      data={data.education.map<[string, string]>((education) => [
-        education.from === education.to
-          ? education.to
-          : `${education.from}-${education.to}`,
+      data={data.education.map<[JSX.Element, string]>((education) => [
+        <DateTime {...education} />,
         education.description,
       ])}
     />

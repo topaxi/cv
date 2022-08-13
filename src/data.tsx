@@ -9,7 +9,7 @@ export const data = {
     Email: <a href="mailto:damian.senn@gmail.com">damian.senn@gmail.com</a>,
     // Website: 'topaxi.ch',
     Github: <a href="https://github.com/topaxi">https://github.com/topaxi</a>,
-    'Date of birth': '17 December 1989',
+    'Date of birth': <time dateTime="1989-12-17">17 December 1989</time>,
     Nationality: 'Switzerland',
     'Civil Status': 'Married',
   },
