@@ -19,6 +19,7 @@ export const data = {
     ['Next.js', 500],
     ['Kubernetes', 500],
     ['Docker', 500],
+    ['Elixir', 200],
     // Skills to be removed from word cloud
     ['SSR', -Infinity],
     ['XHTML 1.1', -Infinity],
