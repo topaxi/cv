@@ -151,6 +151,7 @@ export const data = {
         'Redux',
         'styled-components',
         'styled-system',
+        'Webpack',
         'Node.js',
         'SSR',
       ],
@@ -224,7 +225,13 @@ export const data = {
       role: 'Software Engineer (Frontend)',
       responsibilities:
         'Layout changes and development of the application to take pictures and make them available offline as well as online.',
-      technologies: ['Angular', 'JavaScript', 'PouchDB', 'Offline-First'],
+      technologies: [
+        'Angular',
+        'JavaScript',
+        'PouchDB',
+        'Offline-First',
+        'Webpack',
+      ],
     },
     {
       to: '2017',
