@@ -98,7 +98,10 @@ function Projects(props: ProjectProps) {
       {data.projects.map((project) => (
         <article
           class={`project ${
-            highlightSkill && !project.technologies.includes(highlightSkill)
+            highlightSkill &&
+            !(project.technologies as readonly string[]).includes(
+              highlightSkill
+            )
               ? 'project--unskilled'
               : ''
           }`}
