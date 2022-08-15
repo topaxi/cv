@@ -8,6 +8,7 @@ export const data = {
     Mobile: <a href="tel:0041796720297">+41 79 672 02 97</a>,
     Email: <a href="mailto:damian.senn@gmail.com">damian.senn@gmail.com</a>,
     // Website: 'topaxi.ch',
+    'Online CV': <a href="https://cv.topaxi.ch/">https://cv.topaxi.ch</a>,
     Github: <a href="https://github.com/topaxi">https://github.com/topaxi</a>,
     'Date of birth': <time dateTime="1989-12-17">17 December 1989</time>,
     Nationality: 'Switzerland',
