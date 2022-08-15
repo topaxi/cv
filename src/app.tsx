@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'preact/hooks'
 import ReactWordcloud from 'react-wordcloud'
 import { DateTime } from './components/DateTime'
 import { DefinitionList } from './components/DefinitionList'
@@ -20,7 +21,13 @@ function Employments() {
   )
 }
 
-function Skills() {
+interface SkillsProps {
+  onSelectSkill?: (skill: string) => void
+}
+
+function Skills(props: SkillsProps) {
+  const { onSelectSkill } = props
+
   const technologies: Array<[string[], number]> = [
     ...data.skills.map(([technology, weight]) => [[technology], weight]),
     ...data.projects.map((p, i, projects) => [
@@ -61,6 +68,9 @@ function Skills() {
     >
       <ReactWordcloud
         words={words}
+        callbacks={{
+          onWordClick: (word) => onSelectSkill?.(word.text),
+        }}
         options={{
           colors: ['#222', '#555', '#888'],
           deterministic: true,
@@ -74,14 +84,28 @@ function Skills() {
   )
 }
 
-function Projects() {
+interface ProjectProps {
+  highlightSkill?: string
+  onSelectSkill?: (skill: string) => void
+}
+
+function Projects(props: ProjectProps) {
+  const { highlightSkill, onSelectSkill } = props
+
   return (
     <section style={{ gridArea: 'projects' }}>
       <h2>Projects</h2>
       {data.projects.map((project) => (
-        <article class="project" key={project.title}>
+        <article
+          class={`project ${
+            highlightSkill && !project.technologies.includes(highlightSkill)
+              ? 'project--unskilled'
+              : ''
+          }`}
+          key={project.title}
+        >
           <DateTime {...project} class="project__date" />
-          <div>
+          <div class="project__body">
             <h3>{project.title}</h3>
             {project.description && (
               <p class="project__description">{project.description}</p>
@@ -94,9 +118,23 @@ function Projects() {
             )}
             {(project.technologies.length as number) !== 0 && (
               <ul class="project__technologies">
-                {project.technologies.map((technology) => (
-                  <li>{technology}</li>
-                ))}
+                {project.technologies.map((technology) => {
+                  const selected = technology === highlightSkill
+
+                  return (
+                    <li key={technology} class="project__technology">
+                      <button
+                        style={{
+                          fontWeight: selected ? 'bold' : undefined,
+                          textDecoration: selected ? 'underline' : undefined,
+                        }}
+                        onClick={onSelectSkill?.bind(null, technology)}
+                      >
+                        {technology}
+                      </button>
+                    </li>
+                  )
+                })}
               </ul>
             )}
           </div>
@@ -130,14 +168,27 @@ function Languages() {
 }
 
 export function App() {
+  const [selectedSkill, setSelectedSkill] = useState<string | undefined>(
+    undefined
+  )
+
+  const handleSelectSkill = useCallback((skill: string) => {
+    setSelectedSkill((currentSkill) =>
+      skill === currentSkill ? undefined : skill
+    )
+  }, [])
+
   return (
     <main role="main">
       <h1 style={{ gridArea: 'header' }}>Curriculum Vitae</h1>
       <img style={{ gridArea: 'portrait' }} src={data.portrait} />
       <Personal />
-      <Skills />
+      <Skills onSelectSkill={handleSelectSkill} />
       <Employments />
-      <Projects />
+      <Projects
+        highlightSkill={selectedSkill}
+        onSelectSkill={handleSelectSkill}
+      />
       <Education />
       <Languages />
     </main>

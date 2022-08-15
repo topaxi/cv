@@ -104,6 +104,15 @@
         font-size: 20px;
         flex: 0 0 120px;
       }
+
+      .project__technology > button {
+        all: unset;
+        cursor: pointer;
+      }
+
+      .project__technology > button:hover {
+        text-decoration: underline;
+      }
     </style>
     <style media="screen">
       main {
@@ -151,6 +160,22 @@
       .projects dl {
         row-gap: 24px;
         margin-bottom: 24px;
+      }
+
+      .project--unskilled {
+        opacity: 0.5;
+      }
+
+      .project--unskilled > .project__body > :not(h3) {
+        display: none;
+      }
+
+      text:hover {
+        fill: #000;
+      }
+
+      text[fill='#222']:hover {
+        fill: #666;
       }
     </style>
     <link rel="stylesheet" media="print" href="./src/print.css" />
