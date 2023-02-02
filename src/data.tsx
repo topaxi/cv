@@ -56,8 +56,8 @@ export const data = {
       jobTitle: 'Software Engineer',
     },
     {
-      to: '2008',
-      from: '2016',
+      to: '2016',
+      from: '2008',
       company: 'Adfinis SyGroup AG',
       jobTitle: 'Software Engineer',
     },
