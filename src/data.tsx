@@ -63,9 +63,9 @@ export const data = {
     },
   ],
   education: [
-    { to: 2023, from: 2023, description: 'Auth0 Fundamentals 2023' },
-    { to: 2022, from: 2022, description: 'Architecting on AWS' },
-    { to: 2022, from: 2022, description: 'AWS essentials' },
+    { to: '2023', from: '2023', description: 'Auth0 Fundamentals 2023' },
+    { to: '2022', from: '2022', description: 'Architecting on AWS' },
+    { to: '2022', from: '2022', description: 'AWS essentials' },
     {
       to: '2021',
       from: '2021',
