@@ -22,6 +22,7 @@ export const data = {
     ['Docker', 500],
     ['Elixir', 200],
     // Skills to be removed from word cloud
+    ['Jenkins', -Infinity],
     ['SSR', -Infinity],
     ['XHTML 1.1', -Infinity],
     ['AngularJS', -Infinity],
@@ -29,10 +30,20 @@ export const data = {
     ['REST/JSON API', -Infinity],
     ['cssnext', -Infinity],
     ['Ionic v2 (Cordova)', -Infinity],
+    ['Web SQL', -Infinity],
+    ['Broccoli.js', -Infinity],
+    ['Socket.IO', -Infinity],
+    ['Gulp', -Infinity],
   ],
   employments: [
     {
-      to: 'today',
+      to: "today",
+      from: "2024",
+      company: 'ti&m AG',
+      jobTitle: 'Lead Software Engineer',
+    },
+    {
+      to: '2024',
       from: '2021',
       company: 'SMG Swiss Marketplace Group AG',
       jobTitle: 'Technical Lead Frontend',
@@ -119,7 +130,29 @@ export const data = {
   },
   projects: [
     {
-      to: 'today',
+      to: '2024',
+      from: '2023',
+      title: 'FinanceScout24 Cloud Strategy',
+      description: 'Moving the FinanceScout24 platform to the cloud.',
+      role: 'Technical Lead Frontend',
+      responsibilities: 'Together with the technical leadership and product teams, moving the FinanceScout24 platform to Auth0, AWS and Cloudflare. Building proof of concepts, defining the software architecture and leading the frontend engineers.',
+      technologies: [
+        'React',
+        'TypeScript',
+        'Next.js',
+        'Node.js',
+        'Playwright',
+        'Auth0',
+        'AWS CDK',
+        'AWS Lambda',
+        'AWS S3',
+        'AWS DynamoDB',
+        'Cloudflare Workers',
+        'Github Actions',
+      ]
+    },
+    {
+      to: '2024',
       from: '2020',
       title: 'FinanceScout24',
       description:
@@ -135,9 +168,11 @@ export const data = {
         'Webpack',
         'Next.js',
         'Node.js',
+        'Jest',
         'SASS',
         'Docker',
         'Kubernetes',
+        'Jenkins',
       ],
     },
     {
@@ -145,7 +180,7 @@ export const data = {
       from: '2019',
       title: 'ImmoScout24',
       description:
-        'One of the biggest real estate online market places in Switzerland is continously developed and modernized.',
+        'One of the biggest real estate online market places in Switzerland is continuously developed and modernized.',
       role: 'Software Engineer (Frontend)',
       responsibilities:
         'Developing new styleguide components, performance optimizations of the platform and implementing new features.',
@@ -156,6 +191,7 @@ export const data = {
         'styled-system',
         'Webpack',
         'Node.js',
+        'Jest',
         'SSR',
       ],
     },
