@@ -159,7 +159,7 @@ export const data = {
         'New Scout24 platform which enables users to find their perfectly suited insurance, mortgage or loans.',
       role: 'Team and Techlead Frontend',
       responsibilities:
-        'Leading a team of 10 developers, collaborate and develop the design system with the UX team, identify and coordinate performance improvements with SEO and developers and defining the software architecture of all frontend applications by writing examples and guidelines.',
+        'Leading a team of 10 developers, collaborating and developing the design system with the UX team, identifying and coordinating performance improvements with SEO and developers and defining the software architecture of all frontend applications by writing examples and guidelines.',
       technologies: [
         'React',
         'Redux',
