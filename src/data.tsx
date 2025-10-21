@@ -17,12 +17,16 @@ export const data = {
   skills: [
     ['React', 750],
     ['TypeScript', 500],
+    ['Accessibility', 500],
     ['Next.js', 500],
     ['Kubernetes', 500],
     ['Docker', 500],
-    ['Elixir', 200],
+    ['Vite', 500],
+    ['Vitest', 500],
+    ['Rust', 250],
+    ['Elixir', 250],
+    ['Helm', 100],
     // Skills to be removed from word cloud
-    ['Jenkins', -Infinity],
     ['SSR', -Infinity],
     ['XHTML 1.1', -Infinity],
     ['AngularJS', -Infinity],
@@ -34,11 +38,13 @@ export const data = {
     ['Broccoli.js', -Infinity],
     ['Socket.IO', -Infinity],
     ['Gulp', -Infinity],
+    ['PouchDB', -Infinity],
+    ['Capybara', -Infinity],
   ],
   employments: [
     {
-      to: "today",
-      from: "2024",
+      to: 'today',
+      from: '2024',
       company: 'ti&m AG',
       jobTitle: 'Lead Software Engineer',
     },
@@ -127,6 +133,7 @@ export const data = {
   languages: {
     German: 'Mother tongue',
     English: 'Fluent',
+    Portuguese: 'A1',
   },
   projects: [
     {
@@ -135,7 +142,8 @@ export const data = {
       title: 'FinanceScout24 Cloud Strategy',
       description: 'Moving the FinanceScout24 platform to the cloud.',
       role: 'Technical Lead Frontend',
-      responsibilities: 'Together with the technical leadership and product teams, moving the FinanceScout24 platform to Auth0, AWS and Cloudflare. Building proof of concepts, defining the software architecture and leading the frontend engineers.',
+      responsibilities:
+        'Together with the technical leadership and product teams, moving the FinanceScout24 platform to Auth0, AWS and Cloudflare. Building proof of concepts, defining the software architecture and leading the frontend engineers.',
       technologies: [
         'React',
         'TypeScript',
@@ -149,7 +157,7 @@ export const data = {
         'AWS DynamoDB',
         'Cloudflare Workers',
         'Github Actions',
-      ]
+      ],
     },
     {
       to: '2024',
@@ -299,6 +307,15 @@ export const data = {
       role: 'Teacher',
       responsibilities: 'Teaching web and JavaScript basics.',
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'WebSockets'],
+    },
+    {
+      to: '2017',
+      from: '2017',
+      title: 'Swiss Government',
+      description: 'Swiss Confederation Web Guidelines',
+      role: 'Software Engineer (Frontend)',
+      responsibilities: 'Maintenance and fixes of the web guidelines.',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'Accessibility'],
     },
     {
       to: '2018',
